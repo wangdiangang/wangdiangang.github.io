@@ -6,10 +6,10 @@
     <div class="content" @mousemove="debounce">防抖{{num}}</div>
     <input type="text" v-model="time" style="width:25px" />秒执行一次
     <div style="width:100%;border:1px solid #ccc;margin-top:20px"></div>
-    <h4>函数的防抖(立即执行)👇</h4>
+    <h4>函数的防抖(立即执行)👇(执行一次n秒后再执行)</h4>
     <div class="content" @mousemove="debounce2">防抖{{num2}}</div>
     <input type="text" v-model="time2" style="width:25px" />执行一次n
-    <h4>函数的节流👇</h4>
+    <h4>函数的节流👇(一定时间只执行一次)</h4>
     <div class="content" @mousemove="throttle">节流{{num3}}</div>
     <input type="text" v-model="time3" style="width:25px" />执行一次n
     <div>
@@ -169,7 +169,7 @@ export default {
   line-height: 150px;
   text-align: center;
   color: #fff;
-  background-color: #ccc;
+  background-image:linear-gradient(to right bottom, red, blue, yellow, green);
   font-size: 80px;
 }
 </style>

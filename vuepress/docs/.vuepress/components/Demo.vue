@@ -20,8 +20,21 @@ methods: {
      document.onmousemove=e=>{
          let left=e.clientX-x//实时计算鼠标位置并减去当时记录的位置
          let top=e.clientY-y
+         if(left<0){
+             left=0
+         }
+         if(top<0){
+             top=0
+         }
+         if(top>window.innerHeight-200){
+             top=window.innerHeight-200
+         }
+         if(left>window.innerWidth-200){
+             left=window.innerWidth-200
+         }
          this.positionX=top
          this.positionY=left
+         
          target.style.left=left+'px'
          target.style.top=top+'px'
      }
@@ -38,8 +51,8 @@ methods: {
  #ball{
      position: fixed;
      z-index: 200;
-     top: 200px;
-     right: 0px;
+     top: 500px;
+     left: 20px;
      width: 200px;
      height: 200px;
      line-height: 200px;
