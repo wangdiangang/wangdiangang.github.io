@@ -1,4 +1,4 @@
-## 高端连接
+## 使用插件
 ::: tip
 CSS三角形產生器
 http://apps.eky.hk/css-triangle-generator/zh-hant
