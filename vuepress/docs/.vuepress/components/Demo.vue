@@ -52,7 +52,7 @@ methods: {
 
  }
 #ball::after{
-    content: "可拖动大饼";
+    content: "可拖动";
     color: #fff
 }
 

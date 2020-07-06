@@ -79,7 +79,7 @@ export default {
     },
     countDown() {
       //倒计时
-      var endDate = new Date("2020-01-24 00:00:00");
+      var endDate = new Date("2021-02-12 00:00:00");
       //当前时间
       var nowDate = new Date();
       //相差的总秒数
@@ -97,14 +97,14 @@ export default {
       var seconds = modulo % 60;
       var nowYear=nowDate.getFullYear()
       var nowMouth=nowDate.getMonth()+1>=
-      10?nowDate.getMonth()+1:"0"+(nowDate.getMonth+1()+1)
+      10?nowDate.getMonth()+1:"0"+(nowDate.getMonth()+1+1)
      var nowDay=nowDate.getDate()>=10?nowDate.getDate():'0'+nowDate.getDate()
     var nowHouer=nowDate.getHours()>=10?nowDate.getHours():'0'+nowDate.getHours()
     var nowMinu=nowDate.getMinutes()>=10?nowDate.getMinutes():'0'+nowDate.getMinutes()
     var nowSec=nowDate.getSeconds()>=10?nowDate.getSeconds():'0'+nowDate.getSeconds()
-      var nowMouth=nowDate.getMonth()+1>=10?nowDate.getMonth()+1:"0"+(nowDate.getMonth+1()+1)
-      return ("现在是:<span class='days date'>"+nowYear+'-'+nowMouth+'-'+nowDay+'  '+nowHouer+':'+nowMinu+':'+nowSec+"</span>"+
-        "距离过年还剩:<span class='days date'>" +
+      var nowMouth=nowDate.getMonth()+1>=10?nowDate.getMonth()+1:"0"+(nowDate.getMonth()+1+1)
+      return ("现在是:<span class='days date'>"+nowYear+'年'+nowMouth+'月'+nowDay+'日  '+nowHouer+':'+nowMinu+':'+nowSec+"</span></br>"+
+        "距离新年还剩:<span class='days date'>" +
         (days < 10 ? "0" + days : days) +
         "</span>天<span class='hours date'>" +
         (hours < 10 ? "0" + hours : hours) +
