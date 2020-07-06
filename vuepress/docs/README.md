@@ -1,8 +1,8 @@
 ---
 home: true
 heroImage: /weixin.jpg
-heroText: 五道杠的前端记录
-tagline: 一点一滴都是进步
+heroText: 五道杠
+tagline: 每天进步一丢丢
 actionText: 马上进入 →
 actionLink: /pages/folder1/test1.md
 features:

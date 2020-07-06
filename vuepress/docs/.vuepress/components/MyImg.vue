@@ -1,6 +1,6 @@
 <template>
   <div id="img">
-    <h1>{{timer}}</h1>
+    <h1 class="h1">{{timer}}</h1>
   </div>
 </template>
 
@@ -36,7 +36,7 @@ export default {
   }
 };
 </script>
-<style>
+<style scope>
 #img {
   position: relative;
   height: 700px;
@@ -45,7 +45,7 @@ export default {
   background: url(../public/photo.jpg) no-repeat;
 }
 
-h1 {
+.h1 {
   position: absolute;
   left: 50%;
   top: 50%;
