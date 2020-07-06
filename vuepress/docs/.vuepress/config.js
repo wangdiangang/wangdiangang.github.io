@@ -41,7 +41,7 @@ module.exports = {
                     collapsable: false, // 可选的, 默认值是 true,
                     children: [
                         ['test2.md', '拓展'],
-                        ['sasa.md', 飒飒],
+                        ['sasa.md', '飒飒'],
                         ['me.md', '联系我!!!']
                     ]
                 }
