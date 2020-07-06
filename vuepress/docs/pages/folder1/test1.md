@@ -24,9 +24,9 @@ let p=new Promise((resolve, reject)=>{
 xhr.open('get','www.baidu.com/getList',false)//打开路径方式同异步
 xhr.onreadystatechange=()=>{ // 监测ajax状态
     if(xhr.status==200&&xhr.readyState==4){ //状态值正确执行resolve函数
-        resolve()
+        resolve(xhr)
     }else{//否中抛出错误
-        reject()
+        reject(xhr)
     }
 }
 xhr.send(params)//params参数
