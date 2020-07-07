@@ -6,7 +6,64 @@ http://apps.eky.hk/css-triangle-generator/zh-hant
 LODOP浏览器打印插件
 http://www.lodop.net
 :::
+## 时间格式化
+```javascript
+  function formatTime(date, format){
 
+    if (typeof date == "number") {
+
+      date = new Date(date);
+
+      var o = {
+
+        "y+":date.getFullYear,
+
+        "M+": date.getMonth() + 1, //月份
+
+        "d+": date.getDate(), //日
+
+        "h+": date.getHours(), //小时
+
+        "m+": date.getMinutes(), //分
+
+        "s+": date.getSeconds(), //秒
+
+        "q+": Math.floor((date.getMonth() + 3) / 3), //季度
+
+        "S": date.getMilliseconds() //毫秒
+
+      };
+
+      var fmt = format || "yyyy-MM-dd hh:mm:ss";
+
+      if (/(y+)/.test(fmt))
+
+        fmt = fmt.replace(RegExp.$1, (date.getFullYear() + "").substr(4 - RegExp.$1.length));
+
+      for (var k in o)
+
+        if (new RegExp("(" + k + ")").test(fmt))
+
+          fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+
+      return fmt;
+
+    } else {
+
+      return date;
+
+    }
+
+  }
+
+  console.log(formatTime(Date.now(),'yyyy'))//2019
+
+  console.log(formatTime(Date.now(),'yyyy-MM-dd'))//2019-11-26
+
+  console.log(formatTime(Date.now(),'yyyy-MM'))//2019-11
+
+  console.log(formatTime(Date.now()))//2019-11-26 12:00:10
+```
 ## ES6
 ### promise
 ::: tip
