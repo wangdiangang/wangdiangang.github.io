@@ -97,17 +97,37 @@
 
 
 ## 谷歌设置跨域的浏览器
-
+### window
 > **跨域**：协议.域名.端口号三个有其一不同及涉及到跨域问题，跨域是浏览器的安全机制，可以把浏览器配置可跨域访问的浏览器即可解决大部分需求 
 
 >1.找到桌面的谷歌浏览器快捷方式（一定是快捷方式，没有的话就找到安装目录发到桌面一个）右键属性.如下👇
 ![](/google.png)
 
 
-> 在 目标一栏里  加入  --disable-web-security **or**  --args --disable-web-security --user-data-dir  （注意：--前面是有空格的！不加空格会报错！！）
-
-
+> 在 **版本号49之前chrome** 目标一栏里  加入  --disable-web-security **or**  --args --disable-web-security --user-data-dir  
+> 在 **版本号49之后chrome** 
+> 
+> 1.在电脑上新建一个目录，例如：C:\MyChromeDevUserData
+> 
+> 2.在属性页面中的目标输入框里加上   --disable-web-security --user-data-dir=C:\MyChromeDevUserData，--user-data-dir的值就是刚才新建的目录。
+> 
+> 3.点击应用和确定后关闭属性页面，并打开chrome浏览器。
+> 再次打开chrome，发现有“--disable-web-security”相关的提示，说明chrome又能正常跨域工作了。
+> 
+> （注意：--前面是有空格的！不加空格会报错！！）
+> 
 > 再次打开浏览器，出现提示“你使用的是不受支持的命令标记 --disable-web-security”，那么说明配置成功。
+### MAC
+> mac苹果系统的chrome浏览器就尴尬了，，，，，
+```javascript
+open -n /Applications/Google\ Chrome.app/ --args --disable-web-security  --user-data-dir=/Users/LeoLee/Documents/MyChromeDevUserData 
+   ⬆打开              ⬆浏览器文件路径                          ⬆跨域                       ⬆跨域后浏览信息存储位置////自己定义
+```
+> 每次打开跨域浏览器都要这样打开   很麻烦。。。。。找运维写个shell脚本。
+> 
+> 
+> **微信开发助手也可以通过这种方式进行跨域设置**
+
 
 ## 前端插件xlsx对excel的导出功能
 > table表格导出功能可以使用xlsx插件进行不依赖后端的导出功能

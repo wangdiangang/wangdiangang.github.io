@@ -347,7 +347,7 @@ let time=new Date()
 |Math.max()|取最大值|
 |Math.min()|取最小值|
 |Math.round()|四舍五入到整数|
-|Math.randoom()|0-1随机小数|
+|Math.random()|0-1随机小数|
 |Math.floor|向下取整|
 Math.round(Math.random()*(100-60)+60) 获取60以内随机数字
 
