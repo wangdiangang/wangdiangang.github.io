@@ -437,5 +437,6 @@ return prev+next;
 console.log(yy);//1270
 ```
 
+## 原型链
 
-
+![](/__proto__.png)
