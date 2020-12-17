@@ -17,3 +17,9 @@ features:
 <ClientOnly>
   <BottomData/>
 </ClientOnly> -->
+
+<!-- 1.vuepress文件下执行npm run build -->
+<!-- 2.进入 cd docs/.vurpress/dist -->
+<!-- 3.git init=>git add -A=>git commit -m 'deploy' -->
+<!-- 4.git push -f git@github.com:wangdiangang/wangdiangang.github.io master -->
+<!-- 5.cd - -->
