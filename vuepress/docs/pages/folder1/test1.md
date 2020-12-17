@@ -1,3 +1,7 @@
+<ClientOnly>
+  <Swipper/>
+</ClientOnly>
+
 ## 使用插件
 ::: tip
 CSS三角形產生器
