@@ -1,5 +1,5 @@
 <template>
-  <div id="date">
+  <div id="date" v-loading="loading">
     <div v-html="endDates"></div>
     <h2>函数防抖与节流</h2>
     <h4>函数的防抖(非立即执行)👇</h4>
@@ -16,7 +16,7 @@
       {{num}}
       <button @click="num+=2">加2</button>
       <button @click="num-=2">减2</button>
-      <el-button>默认按钮</el-button>
+      <el-button @click="changeLoading">loading</el-button>
     </div>
   </div>
 </template>
@@ -35,10 +35,17 @@ export default {
       timer2: "",
       time: 1,
       time2: 1,
-      time3: 1
+      time3: 1,
+      loading:false
     };
   },
   methods: {
+    changeLoading(){
+      this.loading=true
+      setTimeout(()=>{
+        this.loading=false
+      },2000)
+    },
     debounce() {
       // 防抖，非立即执行，n秒后执行一次
       if (this.time > 5 || isNaN(this.time) || this.time <= 0) {

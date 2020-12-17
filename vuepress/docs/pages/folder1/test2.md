@@ -10,10 +10,6 @@
   <Demo/>
 </ClientOnly>
 
-## 简单计算器
-<ClientOnly>
-  <Calculator/>
-</ClientOnly>
 
 ## element-ui
 
