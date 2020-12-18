@@ -9,10 +9,14 @@ export default {
         }
     },
     mounted(){
+        this.$nextTick(()=>{
+       
         import('valine').then(res=>{
             console.log('res',res);
             this.Valine=res.default
-            this.init()
+            this.init() 
+            
+        })
         })
     },
     methods:{
@@ -25,6 +29,7 @@ export default {
                 visitor:true,
                 placeholder:'留言板。。。'
             })
+            document.getElementsByClassName('vpower')[0].style.display='none'
         }
     }
 }
