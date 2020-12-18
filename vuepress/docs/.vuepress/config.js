@@ -1,4 +1,15 @@
 module.exports = {
+    plugins: [
+        "vuepress-plugin-coment",
+        {
+            choosen: 'valine',
+            options: {
+                el: '#valine-vuepress-comment',
+                appId: 'tCxkNWXplOhMs6XuQ5IEpbQL-gzGzoHsz',
+                appKey: 'vMTI4iSCUH1jSMiVx38YuO8t',
+            }
+        }
+    ],
     title: '五道杠首页', // 显示在左上角的网页名称以及首页在浏览器标签显示的title名称
     description: '五道杠的前端记录', // meta 中的描述文字，用于SEO
     // 注入到当前页面的 HTML <head> 中的标签
@@ -9,7 +20,7 @@ module.exports = {
         lineNumbers: true
     },
     serviceWorker: true,
-    themeConfig: {    
+    themeConfig: {
         logo: '/weixin.jpg',
         lastUpdated: 'lastUpdate', // string | boolean
         nav: [
@@ -26,7 +37,7 @@ module.exports = {
             { text: 'Github', link: 'https://github.com/wangdiangang' },
         ],
         sidebar: {
-            '/pages/folder1/':[
+            '/pages/folder1/': [
                 {
                     title: '基础js',   // 必要的
                     collapsable: false, // 可选的, 默认值是 true,
@@ -42,6 +53,7 @@ module.exports = {
                     children: [
                         ['test2.md', '拓展'],
                         ['sasa.md', '飒飒'],
+                        ['comment.md', '评论区'],
                         ['me.md', '联系我!!!']
                     ]
                 }

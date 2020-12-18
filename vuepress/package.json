@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "element-ui": "^2.13.0"
+    "element-ui": "^2.13.0",
+    "vuepress-plugin-comment": "^0.7.3"
   }
 }
