@@ -30,6 +30,7 @@ export default {
                 placeholder:'留言板。。。'
             })
             document.getElementsByClassName('vpower')[0].style.display='none'
+            document.getElementsByClassName('vcol-30')[3].style.visibility='hidden'
         }
     }
 }
