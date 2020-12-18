@@ -2,7 +2,7 @@
 home: true
 heroImage: /weixin.jpg
 heroText: 五道杠
-tagline: 每天进步一丢丢
+tagline: ' '
 actionText: 马上进入 →
 actionLink: /pages/folder1/test1.md
 features:
@@ -23,3 +23,4 @@ features:
 <!-- 3.git init=>git add -A=>git commit -m 'deploy' -->
 <!-- 4.git push -f git@github.com:wangdiangang/wangdiangang.github.io master -->
 <!-- 5.cd - -->
+<!-- 或者使用npm run deploy一键部署 -->
