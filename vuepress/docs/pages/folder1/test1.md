@@ -327,7 +327,9 @@ map.delete('name') //删除成功返回true
 |repalce|str.repalce(old,new)|替换|
 |concat|str.concat('a')|拼接|
 |trim-left/right|str.trim()|去除左右两边的空格|
-
+|padStart/padEnd|str.padStart(8,'a')|开头或者末尾添加字符串a以填充到指定的长度8|
+|[...str]|[...str]|字符串长度判断，可以解决一个汉字两个字符串的长度问题|
+|startsWith/endsWith|str.startsWith('hello')|在字符串的开头或者结尾进行搜索|
 ### Date
 ::: tip
 let time=new Date()
