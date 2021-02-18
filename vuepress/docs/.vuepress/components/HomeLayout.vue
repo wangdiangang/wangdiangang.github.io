@@ -87,7 +87,7 @@ export default {
     },
     countDown() {
       //倒计时
-      var endDate = new Date("2021-02-12 00:00:00");
+      var endDate = new Date("2022-02-01 00:00:00");
       //当前时间
       var nowDate = new Date();
       //相差的总秒数
