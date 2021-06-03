@@ -44,7 +44,8 @@ module.exports = {
                     sidebarDepth: 1,    // 可选的, 默认值是 1
                     children: [
                         ['test1.md', 'js操作'],
-                        ['test3.md', '工作问题']
+                        ['test3.md', '工作问题'],
+                        ['plugin.md', '插件']
                     ]
                 },
                 {
