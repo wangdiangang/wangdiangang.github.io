@@ -6,7 +6,7 @@
         <img :src="item" alt="" />
       </el-carousel-item>
     </el-carousel>
-     <audio src="./zhiduanqingchang.mp3" controls  loop autoplay='autoplay' id="audio">该浏览器不支持audio属性</audio>
+     <audio src="./zhiduanqingchang.mp3"  loop autoplay='autoplay' id="audio">该浏览器不支持audio属性</audio>
   </div>
 </template>
 <script>
