@@ -6,13 +6,15 @@
         <img :src="item" alt="" />
       </el-carousel-item>
     </el-carousel>
-     <audio src="./zhiduanqingchang.mp3"  loop autoplay='autoplay' id="audio">该浏览器不支持audio属性</audio>
+     <!-- <audio src="./zhiduanqingchang.mp3"  loop autoplay='autoplay' v-if='flag'>该浏览器不支持audio属性</audio>
+     <audio src="./heniyiyang.mp3"  loop autoplay='autoplay' v-else>该浏览器不支持audio属性</audio> -->
   </div>
 </template>
 <script>
 export default {
   data() {
     return {
+      flag:(new Date().getSeconds())%2?true:false,
       src:'./zhiduanqingchang.mp3',
       urls: [
         "https://fuss10.elemecdn.com/a/3f/3302e58f9a181d2509f3dc0fa68b0jpeg.jpeg",
@@ -26,7 +28,16 @@ export default {
     };
   },
   mounted(){
-    
+    let navbar=document.getElementsByClassName('navbar')[0]
+    let a=document.getElementsByClassName('audio')
+    console.log(a);
+    a.length?navbar.removeChild(a[0]):''
+    let audio=document.createElement('audio')
+    audio.setAttribute('loop','loop')
+    audio.setAttribute('class','audio')
+    audio.setAttribute('autoplay','autoplay')
+    audio.setAttribute('src',this.flag?require('./heniyiyang.mp3'):require('./zhiduanqingchang.mp3'))
+    navbar.append(audio)
    
   }
 };
