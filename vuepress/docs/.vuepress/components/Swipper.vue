@@ -6,9 +6,7 @@
         <img :src="item" alt="" />
       </el-carousel-item>
     </el-carousel>
-     <!-- <audio src="./zhiduanqingchang.mp3"  loop autoplay='autoplay' v-if='flag'>该浏览器不支持audio属性</audio>
-     <audio src="./heniyiyang.mp3"  loop autoplay='autoplay' v-else>该浏览器不支持audio属性</audio> -->
-  </div>
+     </div>
 </template>
 <script>
 export default {
@@ -38,7 +36,21 @@ export default {
     audio.setAttribute('autoplay','autoplay')
     audio.setAttribute('src',this.flag?require('./heniyiyang.mp3'):require('./zhiduanqingchang.mp3'))
     navbar.append(audio)
-   
+   this.snow()
+  },
+  methods:{
+    snow(){
+      let navbar=document.getElementsByClassName('navbar')[0]
+      let div=document.createElement('div')
+      div.className='snow-container'
+      div.innerHTML=`<div class="snow foreground"></div>
+    <div class="snow foreground layered"></div>
+    <div class="snow middleground"></div>
+    <div class="snow middleground layered"></div>
+    <div class="snow background"></div>
+    <div class="snow background layered"></div>`
+ navbar.append(div)
+    }
   }
 };
 </script>
@@ -58,4 +70,76 @@ export default {
 .el-carousel__item:nth-child(2n + 1) {
   background-color: #d3dce6;
 }
+.snow-container {
+    position: absolute;
+    height: calc(100vh);
+    width: 100%;
+    max-width: 100%;
+    top: 0;
+    overflow: hidden;
+    z-index: 2;
+    pointer-events: none;
+}
+.snow {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    -webkit-animation: snow linear infinite;
+    animation: snow linear infinite;
+}
+.snow.foreground {
+    background-image: url("https://dl6rt3mwcjzxg.cloudfront.net/assets/snow/snow-large-075d267ecbc42e3564c8ed43516dd557.png");
+    -webkit-animation-duration: 15s;
+    animation-duration: 15s;
+}
+.snow.foreground.layered {
+    -webkit-animation-delay: 7.5s;
+    animation-delay: 7.5s;
+}
+.snow.middleground {
+    background-image: url(https://dl6rt3mwcjzxg.cloudfront.net/assets/snow/snow-medium-0b8a5e0732315b68e1f54185be7a1ad9.png);
+    -webkit-animation-duration: 20s;
+    animation-duration: 20s;
+}
+.snow.middleground.layered {
+    -webkit-animation-delay: 10s;
+    animation-delay: 10s;
+}
+.snow.background {
+    background-image: url(https://dl6rt3mwcjzxg.cloudfront.net/assets/snow/snow-small-1ecd03b1fce08c24e064ff8c0a72c519.png);
+    -webkit-animation-duration: 25s;
+    animation-duration: 25s;
+}
+.snow.background.layered {
+    -webkit-animation-delay: 12.5s;
+    animation-delay: 12.5s;
+}
+@-webkit-keyframes snow {
+    0% {
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+    100% {
+        -webkit-transform: translate3d(5%, 100%, 0);
+        transform: translate3d(5%, 100%, 0);
+    }
+}
+@keyframes snow {
+    0% {
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+    100% {
+        -webkit-transform: translate3d(5%, 100%, 0);
+        transform: translate3d(5%, 100%, 0);
+    }
+}
+
 </style>
