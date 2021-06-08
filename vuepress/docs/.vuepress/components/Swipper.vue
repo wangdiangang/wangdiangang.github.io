@@ -49,7 +49,12 @@ export default {
     <div class="snow middleground layered"></div>
     <div class="snow background"></div>
     <div class="snow background layered"></div>`
- navbar.append(div)
+      navbar.append(div)
+      
+      let sidebar=document.getElementsByClassName('sidebar')[0]
+      let links=document.getElementsByClassName('links')[0]
+      let page=document.getElementsByClassName('page')[0]
+navbar.style.background=sidebar.style.background=links.style.background=page.style.background="#ccc"
     }
   }
 };
