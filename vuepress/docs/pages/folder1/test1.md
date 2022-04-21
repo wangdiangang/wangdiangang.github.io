@@ -1,4 +1,9 @@
-## 高端连接
+## 所念皆星河
+<ClientOnly>
+  <Video/>
+</ClientOnly>
+
+## 高端链接
 ::: tip
 CSS三角形產生器
 http://apps.eky.hk/css-triangle-generator/zh-hant
